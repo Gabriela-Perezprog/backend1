@@ -1,0 +1,42 @@
+<%- include ("templates/header.ejs") %> 
+  <h1 class="text-primary">INICIO</h1>
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   <%
+    var a=15
+    var b=10
+    var c=a+b
+    var texto="wffu"
+  %>
+<%"la suma de a+b es " +c %>
+  <a href="/info/<%= c %>/<%= texto%>">enviar datos<a/>
+  <ul>
+     <% artistas.forEach((artista)=>{%>
+     <li><%= artista %></li>
+
+
+     <% }) %>
+     
+  </ul>
+  <table border="1" cellpadding="8" cellspacing="0" class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Artistas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% artistas.forEach((artista) => { %>
+      <tr>
+        <td><%= artista %></td>
+      </tr>
+    <% }) %>
+  </tbody>
+  </table>
+
+
+
+  <%- include ("templates/footer.ejs") %>
